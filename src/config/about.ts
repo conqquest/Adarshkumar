@@ -1,9 +1,9 @@
 import { heroConfig } from "@/config/hero";
 
 export const aboutConfig = {
-  headline: ["From curious experiments", "to building with AI."],
+  headline: ["From curious experiments", "to cloud & full-stack development."],
   intro:
-    "I'm Priyanshu Urmaliya — an **AI engineer** and **full-stack developer** who enjoys turning messy ideas into working products. I care about the details: clean APIs, useful interfaces, and systems that actually **ship**.",
+    "I'm Adarsh Kumar — a **software developer** and **cloud analyst** who enjoys turning messy ideas into working products. I care about the details: clean APIs, useful interfaces, and systems that actually **ship**.",
   quote:
     "I believe the best builders learn in public, ship early, and refine until the product feels obvious to use.",
   traits: ["Curious", "Builder", "Focused", "Persistent"] as const,
@@ -20,15 +20,15 @@ export const aboutConfig = {
   meta: [
     { label: "Location", value: heroConfig.location },
     { label: "Status", value: "Open to opportunities" },
-    { label: "Focus", value: "AI · RAG · Full-stack" },
+    { label: "Focus", value: "Full-stack · Cloud · DevOps" },
   ],
   story: {
     title: "How it started",
     paragraphs: [
-      "It started in school with a simple question: how does software actually work? I was fascinated by how a few lines of code could become something people use every day. That **curiosity** pushed me toward engineering — and eventually toward **AI**.",
+      "It started in school with a simple question: how does software actually work? I was fascinated by how a few lines of code could become something people use every day. That **curiosity** pushed me toward engineering — and eventually toward cloud infrastructure and full-stack applications.",
       "College became a mix of coursework, **hackathons**, and late-night builds. I failed plenty along the way — exams, competitions, and projects that never made it past version one. But each attempt taught me something about **scope**, **teamwork**, and staying calm when things break.",
-      "Hackathons changed the pace. **Smart India Hackathon** pushed me to ship under pressure with a team, communicate clearly, and demo something real — not just a slide deck. That experience shaped how I build today: fast iterations, tight feedback loops, and focus on what **users** actually need.",
-      "Now I spend most of my time at the intersection of **AI and product** — RAG systems, LLM workflows, and full-stack apps that connect models to real interfaces. I'm still figuring things out, but I'm doing it by **building**.",
+      "Hackathons changed the pace. Winning 1st Position at the **Smart India Hackathon** pushed me to ship under pressure with a team, communicate clearly, and demo something real — not just a slide deck. That experience shaped how I build today: fast iterations, tight feedback loops, and focus on what **users** actually need.",
+      "Now I spend most of my time at the intersection of **cloud systems and full-stack development** — building scalable ERP systems, serverless workflows on AWS, and clean user interfaces. I'm still figuring things out, but I'm doing it by **building**.",
     ],
   },
   principles: {
@@ -37,7 +37,7 @@ export const aboutConfig = {
       {
         title: "Stay curious",
         description:
-          "AI moves fast. I learn by building, reading, and talking to people a few steps ahead of me.",
+          "AI and cloud move fast. I learn by building, reading, and talking to people a few steps ahead of me.",
       },
       {
         title: "Ship, then refine",
@@ -59,24 +59,24 @@ export const aboutConfig = {
   beyond: {
     title: "Beyond the code",
     paragraphs: [
-      "Outside of work, you'll find me writing on Medium, exploring new tools, or chasing the next **hackathon** idea. I like **learning in public** and sharing what actually worked — and what didn't.",
+      "Outside of work, you'll find me exploring new tools, studying cloud architectures, or chasing the next **hackathon** idea. I like **learning in public** and sharing what actually worked — and what didn't.",
       "I'm drawn to builders who combine **technical depth** with **clarity**. That's the kind of engineer I want to become.",
     ],
   },
   connectLinks: [
     {
       name: "Email",
-      href: "mailto:priyanshuurmaliya23011@gmail.com",
+      href: "mailto:dev.adarshkumar07@gmail.com",
       icon: "mail" as const,
     },
     {
-      name: "X",
-      href: "https://x.com/imdevPU23",
-      icon: "x" as const,
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/adarshkumardev/",
+      icon: "linkedin" as const,
     },
     {
       name: "GitHub",
-      href: "https://github.com/GitHpriyanshu23",
+      href: "https://github.com/conqquest",
       icon: "github" as const,
     },
   ],

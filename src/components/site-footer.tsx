@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { GithubLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
 import { siteConfig } from "@/config/meta";
 
 const footerSocial = [
-  { name: "X", href: "https://x.com/imdevPU23", icon: XLogo },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/priyanshu-urmaliya-1183b425a/", icon: LinkedinLogo },
-  { name: "GitHub", href: "https://github.com/GitHpriyanshu23", icon: GithubLogo },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/adarshkumardev/", icon: LinkedinLogo },
+  { name: "GitHub", href: "https://github.com/conqquest", icon: GithubLogo },
 ];
 
 export function SiteFooter() {

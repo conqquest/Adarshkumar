@@ -1,10 +1,10 @@
-# Priyanshu Urmaliya — Portfolio
+# Adarsh Kumar — Portfolio
 
-Personal portfolio for an AI engineer and full-stack developer. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX — clean layout, fast pages, and content you can edit without touching UI code.
+Personal portfolio for a software developer and cloud engineer. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX — clean layout, fast pages, and content you can edit without touching UI code.
 
 ![Portfolio preview](./public/assets/readme-preview.png)
 
-**Live:** [priyanshuurmaliya.dev](https://priyanshuurmaliya.dev) · **GitHub:** [@GitHpriyanshu23](https://github.com/GitHpriyanshu23)
+**Live:** [adarshkumar007.vercel.app](https://adarshkumar007.vercel.app) · **GitHub:** [@conqquest](https://github.com/conqquest)
 
 ---
 
@@ -42,7 +42,7 @@ Personal portfolio for an AI engineer and full-stack developer. Built with Next.
 **Requirements:** Node.js 18+
 
 ```bash
-git clone https://github.com/GitHpriyanshu23/My_portfolio.git
+git clone https://github.com/conqquest/My_portfolio.git
 cd My_portfolio
 npm install
 npm run dev

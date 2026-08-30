@@ -4,9 +4,8 @@ export const quoteConfig = {
 };
 
 export const rotatingTitles = [
-  "AI Engineer",
+  "Software Developer",
+  "Cloud Engineer",
   "Full Stack Developer",
-  "Software Engineer",
-  "Traveller",
   "Curious Builder",
 ];

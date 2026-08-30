@@ -1,25 +1,27 @@
 export const education = [
   {
-    school: "IPS Academy Indore",
-    degree: "Bachelor of Technology · Computer Software Engineering",
-    period: "2022—2026",
-  },
-  {
-    school: "Kendriya Vidyalaya",
-    degree: "Mathematics & Science",
-    period: "2008—2021",
+    school: "KIET Group of Institutions, Ghaziabad, UP",
+    degree: "Bachelor of Technology in Information Technology",
+    period: "2024—2028",
   },
 ];
 
 export const skills = [
-  "Python",
-  "TypeScript",
-  "React",
+  "React.js",
   "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "Node.js",
+  "Express.js",
+  "Python",
+  "Django",
   "FastAPI",
-  "Machine Learning",
-  "RAG",
-  "LLMs",
-  "IoT",
+  "AWS (EC2, S3, Lambda, SageMaker)",
   "Docker",
+  "MongoDB",
+  "PostgreSQL",
+  "MySQL",
+  "SQL",
+  "Tailwind CSS",
+  "CI/CD",
 ];

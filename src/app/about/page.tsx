@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   EnvelopeSimple,
   GithubLogo,
-  XLogo,
+  LinkedinLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
 import { HighlightedText } from "@/components/highlighted-text";
@@ -11,7 +11,7 @@ import { createPageMetadata, pageTitle } from "@/lib/metadata";
 
 const connectIconMap = {
   mail: EnvelopeSimple,
-  x: XLogo,
+  linkedin: LinkedinLogo,
   github: GithubLogo,
 };
 
