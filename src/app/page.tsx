@@ -20,7 +20,7 @@ export default function HomePage() {
       <Hero />
       <TechStackSection />
       <ExperienceSection limit={3} showAllLink />
-      <AchievementsSection limit={3} showAllLink />
+      {/* <AchievementsSection limit={3} showAllLink /> */}
       <FeaturedProjects limit={2} />
       <GitHubContributions />
       <QuoteVisitorCard />

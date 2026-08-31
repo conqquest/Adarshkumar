@@ -6,11 +6,11 @@ export const headerNav = [
 
 export const moreNav = [
   { label: "Work", href: "/work" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
   { label: "Resume", href: "/resume" },
-  { label: "Achievements", href: "/achievements" },
+  // { label: "Achievements", href: "/achievements" },
   { label: "Books", href: "/books" },
-  { label: "Favourites", href: "/favourites" },
+  // { label: "Favourites", href: "/favourites" },
   { label: "Music", href: "/music" },
 ] as const;
 
@@ -19,11 +19,11 @@ export const footerNav = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Work", href: "/work" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
   { label: "Resume", href: "/resume" },
-  { label: "Achievements", href: "/achievements" },
+  // { label: "Achievements", href: "/achievements" },
   { label: "Books", href: "/books" },
-  { label: "Favourites", href: "/favourites" },
+  // { label: "Favourites", href: "/favourites" },
   { label: "Music", href: "/music" },
 ] as const;
 

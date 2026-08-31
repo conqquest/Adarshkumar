@@ -18,11 +18,11 @@ export const projects: Project[] = [
     title: "Full-Stack Enterprise ERP System",
     date: "08.2026",
     description:
-      "A production-ready Full Stack ERP application to automate manufacturing lifecycles, processing over 1,000 inventory items and securing production tracking operations.",
+      "Engineered a production-ready Full Stack ERP application to automate manufacturing lifecycles, processing over 1,000 inventory items and securing production tracking operations.",
     tech: ["React", "Node.js", "TypeScript", "MongoDB", "CI/CD", "Cloudflare Pages", "Render"],
     href: "https://github.com/conqquest/Enterprise-ERP",
     featured: true,
-    cover: "/assets/projects/scrum.png",
+    cover: "/assets/projects/erp.png",
     gradient: "from-blue-500/25 via-indigo-500/15 to-violet-500/25",
   },
   {
@@ -30,11 +30,10 @@ export const projects: Project[] = [
     title: "TerraStorm – Cloud-Native AI Platform",
     date: "03.2026",
     description:
-      "A Cloud AI platform utilizing an event-driven AWS serverless architecture to automate land-use change detection across 10,000+ square kilometers of satellite imagery.",
+      "Architected a Cloud AI platform utilizing an event-driven AWS serverless architecture to automate land-use change detection across 10,000+ square kilometers of satellite imagery.",
     tech: ["Python", "AWS Serverless", "Django", "Machine Learning", "S3", "Lambda", "SageMaker", "SNS"],
     href: "https://github.com/conqquest/TerraStorm",
     featured: true,
-    cover: "/assets/projects/smart-plant-doctor.png",
     gradient: "from-emerald-500/25 via-green-500/15 to-lime-500/25",
   },
   {
@@ -42,11 +41,11 @@ export const projects: Project[] = [
     title: "Brains – MERN Stack CMS",
     date: "12.2025",
     description:
-      "A Content Management System (CMS) enabling full CRUD operations, empowering over 200 users to securely create and organize digital knowledge bases.",
+      "Developed a Content Management System (CMS) enabling full CRUD operations, empowering over 200 users to securely create and organize digital knowledge bases.",
     tech: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "TypeScript", "JWT"],
     href: "https://github.com/conqquest/Brains-CMS",
     featured: true,
-    cover: "/assets/projects/Ragkno.png",
+    cover: "/assets/projects/brains.png",
     gradient: "from-violet-500/25 via-purple-500/15 to-fuchsia-500/25",
   },
 ];
