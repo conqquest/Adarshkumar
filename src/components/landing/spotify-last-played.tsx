@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { lastPlayedTrack } from "@/config/spotify";
 
 function VinylDisc({ isPlaying }: { isPlaying: boolean }) {
   return (
@@ -29,14 +28,7 @@ interface SpotifyTrack {
 }
 
 export function SpotifyLastPlayed() {
-  const [track, setTrack] = useState<SpotifyTrack>({
-    isPlaying: false,
-    name: lastPlayedTrack.title,
-    artist: lastPlayedTrack.artist,
-    album: lastPlayedTrack.album,
-    albumImage: lastPlayedTrack.albumArt,
-    spotifyUrl: lastPlayedTrack.songUrl,
-  });
+  const [track, setTrack] = useState<SpotifyTrack | null>(null);
 
   useEffect(() => {
     async function fetchPlayingStatus() {
@@ -53,7 +45,7 @@ export function SpotifyLastPlayed() {
               name: nowPlayingData.name,
               artist: nowPlayingData.artist,
               album: nowPlayingData.album,
-              albumImage: nowPlayingData.albumImage || lastPlayedTrack.albumArt,
+              albumImage: nowPlayingData.albumImage || "",
               spotifyUrl: nowPlayingData.spotifyUrl,
             });
             return;
@@ -73,7 +65,7 @@ export function SpotifyLastPlayed() {
               name: last.name,
               artist: last.artist,
               album: last.album,
-              albumImage: last.albumImage || lastPlayedTrack.albumArt,
+              albumImage: last.albumImage || "",
               spotifyUrl: last.spotifyUrl,
             });
           }
@@ -88,6 +80,24 @@ export function SpotifyLastPlayed() {
     const interval = setInterval(fetchPlayingStatus, 30000);
     return () => clearInterval(interval);
   }, []);
+
+  // Show skeleton loader until real data arrives
+  if (!track) {
+    return (
+      <div className="group w-full max-w-xs">
+        <div className="flex items-center gap-3 rounded-xl border border-border bg-card/80 p-2.5 shadow-sm backdrop-blur-sm animate-pulse">
+          <div className="relative flex h-14 w-16 shrink-0 items-center">
+            <div className="h-14 w-14 rounded-[3px] bg-neutral-700/50" />
+          </div>
+          <div className="min-w-0 flex-1 space-y-2">
+            <div className="h-2 w-16 rounded bg-neutral-700/50" />
+            <div className="h-3 w-24 rounded bg-neutral-700/50" />
+            <div className="h-2 w-20 rounded bg-neutral-700/50" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="group w-full max-w-xs">
@@ -152,3 +162,4 @@ export function SpotifyLastPlayed() {
     </div>
   );
 }
+
