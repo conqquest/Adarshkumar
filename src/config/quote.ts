@@ -1,6 +1,6 @@
 export const quoteConfig = {
-  text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-  author: "Winston Churchill",
+  text: "To become who you want to be be you must sacrifice who you are",
+  author: "Miyamoto Musashi",
 };
 
 export const rotatingTitles = [
