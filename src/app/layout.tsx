@@ -41,7 +41,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <PersonJsonLd />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <TooltipProvider>
             <div className="relative flex min-h-screen flex-col bg-green-grid">
               <SiteHeader />

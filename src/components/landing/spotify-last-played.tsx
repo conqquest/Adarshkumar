@@ -2,20 +2,92 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { lastPlayedTrack } from "@/config/spotify";
 
-function VinylDisc() {
+function VinylDisc({ isPlaying }: { isPlaying: boolean }) {
   return (
     <div className="relative size-12 shrink-0">
-      <div className="absolute inset-0 rounded-full vinyl-disc group-hover:animate-vinyl-spin" />
+      <div 
+        className={`absolute inset-0 rounded-full vinyl-disc group-hover:animate-vinyl-spin ${
+          isPlaying ? "animate-vinyl-spin" : ""
+        }`} 
+      />
       <div className="absolute inset-[26%] rounded-full bg-neutral-800 ring-1 ring-black/60" />
       <div className="absolute left-1/2 top-1/2 z-10 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-300 shadow-sm ring-1 ring-neutral-400/80" />
     </div>
   );
 }
 
+interface SpotifyTrack {
+  isPlaying: boolean;
+  name: string;
+  artist: string;
+  album: string;
+  albumImage: string;
+  spotifyUrl: string;
+}
+
 export function SpotifyLastPlayed() {
-  const track = lastPlayedTrack;
+  const [track, setTrack] = useState<SpotifyTrack>({
+    isPlaying: false,
+    name: lastPlayedTrack.title,
+    artist: lastPlayedTrack.artist,
+    album: lastPlayedTrack.album,
+    albumImage: lastPlayedTrack.albumArt,
+    spotifyUrl: lastPlayedTrack.songUrl,
+  });
+
+  useEffect(() => {
+    async function fetchPlayingStatus() {
+      try {
+        // Try now playing first
+        const nowPlayingRes = await fetch(
+          "https://portfolio-backend-t7hl.onrender.com/api/spotify/now-playing"
+        );
+        if (nowPlayingRes.ok) {
+          const nowPlayingData = await nowPlayingRes.json();
+          if (nowPlayingData && nowPlayingData.isPlaying) {
+            setTrack({
+              isPlaying: true,
+              name: nowPlayingData.name,
+              artist: nowPlayingData.artist,
+              album: nowPlayingData.album,
+              albumImage: nowPlayingData.albumImage || lastPlayedTrack.albumArt,
+              spotifyUrl: nowPlayingData.spotifyUrl,
+            });
+            return;
+          }
+        }
+
+        // Fallback to recently played
+        const recentRes = await fetch(
+          "https://portfolio-backend-t7hl.onrender.com/api/spotify/recent"
+        );
+        if (recentRes.ok) {
+          const recentData = await recentRes.json();
+          if (recentData && recentData.length > 0) {
+            const last = recentData[0];
+            setTrack({
+              isPlaying: false,
+              name: last.name,
+              artist: last.artist,
+              album: last.album,
+              albumImage: last.albumImage || lastPlayedTrack.albumArt,
+              spotifyUrl: last.spotifyUrl,
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch current/recent Spotify track:", err);
+      }
+    }
+
+    fetchPlayingStatus();
+    // Poll every 30 seconds
+    const interval = setInterval(fetchPlayingStatus, 30000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="group w-full max-w-xs">
@@ -23,7 +95,7 @@ export function SpotifyLastPlayed() {
         <div className="relative flex h-14 w-16 shrink-0 items-center">
           <div className="relative z-10 h-14 w-14 overflow-hidden rounded-[3px] shadow-[2px_2px_8px_rgba(0,0,0,0.18)] ring-1 ring-black/10">
             <Image
-              src={track.albumArt}
+              src={track.albumImage}
               alt={`${track.album} cover`}
               fill
               sizes="56px"
@@ -33,28 +105,40 @@ export function SpotifyLastPlayed() {
           </div>
 
           <div className="absolute -right-0.5 top-1/2 z-0 -translate-y-1/2">
-            <VinylDisc />
+            <VinylDisc isPlaying={track.isPlaying} />
           </div>
         </div>
 
         <div className="min-w-0 flex-1">
           <p className="flex items-center gap-1 text-[10px] text-secondary">
-            <span className="size-1 rounded-full bg-secondary/60" />
-            Last played
+            {track.isPlaying ? (
+              <>
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span className="text-emerald-500 font-semibold">Now playing</span>
+              </>
+            ) : (
+              <>
+                <span className="size-1 rounded-full bg-secondary/60" />
+                <span>Last played</span>
+              </>
+            )}
           </p>
           <Link
-            href={track.songUrl}
+            href={track.spotifyUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-0.5 block truncate text-xs font-semibold text-foreground hover:underline"
           >
-            {track.title}
+            {track.name}
           </Link>
           <p className="truncate text-[10px] text-secondary">{track.artist}</p>
         </div>
 
         <Link
-          href={track.songUrl}
+          href={track.spotifyUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open in Spotify"

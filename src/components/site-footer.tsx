@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/container";
 import { siteConfig } from "@/config/meta";
+import { SpotifyWidget } from "./spotify-widget";
 
 const footerSocial = [
   { name: "LinkedIn", href: "https://www.linkedin.com/in/adarshkumardev/", icon: LinkedinLogo },
@@ -12,9 +13,12 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/60">
       <Container className="flex flex-col gap-6 py-8 sm:flex-row sm:items-end sm:justify-between">
-        <div className="font-mono text-sm text-secondary">
-          <p>© {new Date().getFullYear()} {siteConfig.name}</p>
-          <p className="mt-1">Built with love, late nights, coffee</p>
+        <div className="flex flex-col gap-4">
+          <div className="font-mono text-sm text-secondary">
+            <p>© {new Date().getFullYear()} {siteConfig.name}</p>
+            <p className="mt-1">Built with love, late nights, coffee</p>
+          </div>
+          <SpotifyWidget />
         </div>
 
         <div className="flex items-center gap-2">

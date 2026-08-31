@@ -11,6 +11,7 @@ export const moreNav = [
   { label: "Achievements", href: "/achievements" },
   { label: "Books", href: "/books" },
   { label: "Favourites", href: "/favourites" },
+  { label: "Music", href: "/music" },
 ] as const;
 
 export const footerNav = [
@@ -23,6 +24,7 @@ export const footerNav = [
   { label: "Achievements", href: "/achievements" },
   { label: "Books", href: "/books" },
   { label: "Favourites", href: "/favourites" },
+  { label: "Music", href: "/music" },
 ] as const;
 
 export const commandItems = [
