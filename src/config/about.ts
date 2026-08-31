@@ -3,7 +3,7 @@ import { heroConfig } from "@/config/hero";
 export const aboutConfig = {
   headline: ["From curious experiments", "to cloud & full-stack development."],
   intro:
-    "I'm Adarsh Kumar — a **software developer** and **cloud analyst** who enjoys turning messy ideas into working products. I care about the details: clean APIs, useful interfaces, and systems that actually **ship**.",
+    "Hello! I'm Adarsh Kumar, an Information Technology student with a passion for cloud computing, AI, backend development, and system design. I enjoy building real-world software that solves practical problems and continuously learning new technologies.",
   quote:
     "I believe the best builders learn in public, ship early, and refine until the product feels obvious to use.",
   traits: ["Curious", "Builder", "Focused", "Persistent"] as const,
@@ -23,12 +23,10 @@ export const aboutConfig = {
     { label: "Focus", value: "Full-stack · Cloud · DevOps" },
   ],
   story: {
-    title: "How it started",
+    title: "My Story",
     paragraphs: [
-      "It started in school with a simple question: how does software actually work? I was fascinated by how a few lines of code could become something people use every day. That **curiosity** pushed me toward engineering — and eventually toward cloud infrastructure and full-stack applications.",
-      "College became a mix of coursework, **hackathons**, and late-night builds. I failed plenty along the way — exams, competitions, and projects that never made it past version one. But each attempt taught me something about **scope**, **teamwork**, and staying calm when things break.",
-      "Hackathons changed the pace. Winning 1st Position at the **Smart India Hackathon** pushed me to ship under pressure with a team, communicate clearly, and demo something real — not just a slide deck. That experience shaped how I build today: fast iterations, tight feedback loops, and focus on what **users** actually need.",
-      "Now I spend most of my time at the intersection of **cloud systems and full-stack development** — building scalable ERP systems, serverless workflows on AWS, and clean user interfaces. I'm still figuring things out, but I'm doing it by **building**.",
+      "I'm just a small kid that hails from [Bundelkhand.](https://www.google.com/maps/place/Bundelkhand/@24.795515,79.410455,8z/data=!3m1!4b1!4m6!3m5!1s0x3978738a56576cd3:0x83a98eed49abb30c!8m2!3d24.8772957!4d79.0192997!16zL20vMDNjMTBy?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D) I enjoy [developing](https://devadarshkumar.pages.dev/projects) applications and working as a cloud engineer. Currently I'm working on [ERP](https://github.com/amar-packers-erp). I've been coding for about 2 years and have built a few projects. I love learning new technologies, solving real-world problems, and sharing what I learn with others.",
+      "My life's work is to make technology easy to understand and interesting to learn about. Outside of coding, I'm a huge music fan. I also love editing videos, playing chess in my free time, and exploring new ideas that help me grow as a developer.",
     ],
   },
   principles: {
@@ -78,6 +76,11 @@ export const aboutConfig = {
       name: "GitHub",
       href: "https://github.com/conqquest",
       icon: "github" as const,
+    },
+    {
+      name: "Twitter",
+      href: "https://x.com/adarshtwt7",
+      icon: "twitter" as const,
     },
   ],
 };
