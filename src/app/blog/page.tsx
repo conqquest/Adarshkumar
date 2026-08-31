@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
-import { BlogCover } from "@/components/blog-cover";
-import { Container } from "@/components/container";
-import { getBlogPosts } from "@/lib/mdx";
+// import Link from "next/link";
+// import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+// import { BlogCover } from "@/components/blog-cover";
+// import { Container } from "@/components/container";
+// import { getBlogPosts } from "@/lib/mdx";
 import { createPageMetadata, pageTitle } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -13,8 +13,10 @@ export const metadata = createPageMetadata({
 });
 
 export default async function BlogPage() {
-  const posts = await getBlogPosts();
+  // const posts = await getBlogPosts();
 
+  return null;
+  /*
   return (
     <div className="space-y-10 pb-16 pt-8">
       <Container>
@@ -55,4 +57,5 @@ export default async function BlogPage() {
       </Container>
     </div>
   );
+  */
 }

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
-import { AchievementCard } from "@/components/landing/achievement-card";
-import { Container } from "@/components/container";
-import { achievements } from "@/config/achievements";
+// import Link from "next/link";
+// import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
+// import { AchievementCard } from "@/components/landing/achievement-card";
+// import { Container } from "@/components/container";
+// import { achievements } from "@/config/achievements";
 import { createPageMetadata, pageTitle } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -12,6 +12,8 @@ export const metadata = createPageMetadata({
 });
 
 export default function AchievementsPage() {
+  return null;
+  /*
   return (
     <div className="space-y-10 pb-16 pt-8">
       <Container>
@@ -43,4 +45,5 @@ export default function AchievementsPage() {
       </Container>
     </div>
   );
+  */
 }
