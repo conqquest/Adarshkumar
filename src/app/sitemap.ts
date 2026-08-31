@@ -3,6 +3,8 @@ import { achievements } from "@/config/achievements";
 import { siteConfig } from "@/config/meta";
 import { getBlogPosts, getProjectPosts } from "@/lib/mdx";
 
+export const dynamic = "force-static";
+
 const staticRoutes: MetadataRoute.Sitemap = [
   { url: siteConfig.url, changeFrequency: "weekly", priority: 1 },
   { url: `${siteConfig.url}/about`, changeFrequency: "monthly", priority: 0.9 },
