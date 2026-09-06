@@ -1,48 +1,86 @@
 export type Favourite = {
   title: string;
   cover: string;
+  subtitle?: string;
 };
 
 export const favouriteMovies: Favourite[] = [
   {
-    title: "The Social Network",
-    cover: "/assets/favourites/the-social-network.png",
+    title: "Southpaw",
+    cover: "/assets/favourites/southpaw.jpg",
+    subtitle: "#1",
   },
   {
-    title: "Whiplash",
-    cover: "/assets/favourites/whiplash.png",
+    title: "The Fault in Our Stars",
+    cover: "/assets/favourites/the-fault-in-our-stars.jpg",
+    subtitle: "#2",
   },
   {
-    title: "The Founder",
-    cover: "/assets/favourites/the-founder.png",
+    title: "Sonchiriya",
+    cover: "/assets/favourites/sonchiriya.jpg",
+    subtitle: "#3",
   },
   {
-    title: "The Wolf of Wall Street",
-    cover: "/assets/favourites/the-wolf-of-wall-street.png",
+    title: "Grave of the Fireflies",
+    cover: "/assets/favourites/grave-of-the-fireflies.jpg",
+    subtitle: "#4",
   },
   {
-    title: "The Big Short",
-    cover: "/assets/favourites/the-big-short.png",
+    title: "Gangs of Wasseypur",
+    cover: "/assets/favourites/gangs-of-wasseypur.jpg",
+    subtitle: "#5",
+  },
+  {
+    title: "Fury",
+    cover: "/assets/favourites/fury.jpg",
+    subtitle: "#6",
+  },
+  {
+    title: "Kill Bill",
+    cover: "/assets/favourites/kill-bill.jpg",
+    subtitle: "#7",
+  },
+  {
+    title: "Scarface",
+    cover: "/assets/favourites/scarface.jpg",
+    subtitle: "#8",
   },
   {
     title: "The Pursuit of Happyness",
-    cover: "/assets/favourites/the-pursuit-of-happiness.png",
+    cover: "/assets/favourites/the-pursuit-of-happiness.jpg",
+    subtitle: "#9",
   },
   {
-    title: "American Psycho",
-    cover: "/assets/favourites/american-psycho.png",
+    title: "Troy",
+    cover: "/assets/favourites/troy.jpg",
+    subtitle: "#10",
+  },
+];
+
+export const specialMentions: Favourite[] = [
+  {
+    title: "Creed",
+    cover: "/assets/favourites/creed.jpg",
   },
   {
-    title: "Nightcrawler",
-    cover: "/assets/favourites/nightcrawler.png",
+    title: "The Dark Knight Rises",
+    cover: "/assets/favourites/the-dark-knight-rises.jpg",
   },
   {
-    title: "Fight Club",
-    cover: "/assets/favourites/fight-club.png",
+    title: "Avengers: Infinity War",
+    cover: "/assets/favourites/infinity-war.jpg",
   },
   {
-    title: "Dumb Money",
-    cover: "/assets/favourites/dumb-money.png",
+    title: "John Wick",
+    cover: "/assets/favourites/john-wick.jpg",
+  },
+  {
+    title: "Tenet",
+    cover: "/assets/favourites/tenet.jpg",
+  },
+  {
+    title: "Inception",
+    cover: "/assets/favourites/inception.jpg",
   },
 ];
 
@@ -56,3 +94,4 @@ export const favouriteSeries: Favourite[] = [
     cover: "/assets/favourites/dark.png",
   },
 ];
+

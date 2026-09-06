@@ -1,6 +1,10 @@
-// import { Container } from "@/components/container";
-// import { MediaCoverGrid } from "@/components/media-cover-grid";
-// import { favouriteMovies, favouriteSeries } from "@/config/favourites";
+import { Container } from "@/components/container";
+import { MediaCoverGrid } from "@/components/media-cover-grid";
+import {
+  favouriteMovies,
+  specialMentions,
+  favouriteSeries,
+} from "@/config/favourites";
 import { createPageMetadata, pageTitle } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -11,8 +15,6 @@ export const metadata = createPageMetadata({
 });
 
 export default function FavouritesPage() {
-  return null;
-  /*
   return (
     <div className="pb-16 pt-8">
       <Container className="max-w-5xl space-y-12">
@@ -26,9 +28,16 @@ export default function FavouritesPage() {
 
         <div className="space-y-4">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-secondary">
-            Movies
+            Top 10 Movies
           </h2>
           <MediaCoverGrid items={favouriteMovies} />
+        </div>
+
+        <div className="space-y-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-secondary">
+            Special Mentions
+          </h2>
+          <MediaCoverGrid items={specialMentions} />
         </div>
 
         <div className="space-y-4">
@@ -40,5 +49,5 @@ export default function FavouritesPage() {
       </Container>
     </div>
   );
-  */
 }
+
