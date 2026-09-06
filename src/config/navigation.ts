@@ -10,7 +10,7 @@ export const moreNav = [
   { label: "Resume", href: "/resume" },
   // { label: "Achievements", href: "/achievements" },
   { label: "Books", href: "/books" },
-  // { label: "Favourites", href: "/favourites" },
+  { label: "Movies & Favourites", href: "/favourites" },
   { label: "Music", href: "/music" },
 ] as const;
 
@@ -23,7 +23,7 @@ export const footerNav = [
   { label: "Resume", href: "/resume" },
   // { label: "Achievements", href: "/achievements" },
   { label: "Books", href: "/books" },
-  // { label: "Favourites", href: "/favourites" },
+  { label: "Movies", href: "/favourites" },
   { label: "Music", href: "/music" },
 ] as const;
 
@@ -33,3 +33,4 @@ export const commandItems = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/adarshkumardev/", external: true },
   { label: "Email", href: "mailto:dev.adarshkumar07@gmail.com", external: true },
 ];
+

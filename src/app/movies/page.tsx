@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import FavouritesPage, { metadata } from "@/app/favourites/page";
 
-export default function MoviesPage() {
-  redirect("/favourites");
-}
+export { metadata };
+export default FavouritesPage;
+
