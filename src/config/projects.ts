@@ -14,6 +14,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "cyclocast",
+    title: "CycloCast – AI Cyclone Intelligence Platform",
+    date: "09.2026",
+    description:
+      "Built an AI-powered tropical cyclone tracking platform for IMD/MoES (SIH 2026) that fuses multi-source satellite imagery with deep learning to deliver real-time storm detection, IMD classification, 72-hour path forecasts with uncertainty cones, and historical replay — processing Meteosat IR telemetry and GraphCast atmospheric data.",
+    tech: ["React", "TypeScript", "Python", "PyTorch", "FastAPI", "PostgreSQL", "Leaflet", "Docker"],
+    href: "https://github.com/conqquest/CycloCast",
+    website: "https://cyclocast-web.onrender.com/dashboard",
+    featured: true,
+    cover: "/assets/projects/cyclocast.png",
+    gradient: "from-cyan-500/25 via-teal-500/15 to-emerald-500/25",
+  },
+  {
     slug: "full-stack-enterprise-erp-system",
     title: "Full-Stack Enterprise ERP System",
     date: "08.2026",

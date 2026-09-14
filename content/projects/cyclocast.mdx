@@ -1,0 +1,35 @@
+---
+title: "CycloCast – AI Cyclone Intelligence Platform"
+description: "AI-powered tropical cyclone tracking platform for IMD/MoES (SIH 2026) — fuses multi-source satellite imagery with explainable deep learning to deliver real-time storm detection, IMD classification, 72-hour AI forecasts, and historical replay."
+date: "09.2026"
+tech: ["React", "TypeScript", "Python", "PyTorch", "FastAPI", "PostgreSQL", "Leaflet", "Docker"]
+---
+
+**CycloCast** is an AI-powered cyclone intelligence platform built for the Indian Meteorological Department (IMD) under the Ministry of Earth Sciences (MoES) as part of the Smart India Hackathon 2026.
+
+🔗 **Live Platform Demo:** [cyclocast-web.onrender.com/dashboard](https://cyclocast-web.onrender.com/dashboard)
+
+![CycloCast AI Real-Time Operations Dashboard](/assets/projects/cyclocast-dashboard.png)
+
+## The Problem
+
+Every year, tropical cyclones hit India's coast causing massive damage. Current detection relies on separate tools and manual expert judgment. CycloCast unifies satellite observation, atmospheric data, and AI prediction into a single real-time operations dashboard.
+
+![CycloCast 72-Hour AI Forecast & Trajectory Engine](/assets/projects/cyclocast-forecast.png)
+
+## Key Highlights
+
+- **Multi-Source Data Fusion** — Combines Meteosat-8 infrared satellite telemetry (IR_108 channel), GraphCast atmospheric forecast variables (wind shear, steering currents, moisture), and geographic positional encodings for comprehensive cyclone analysis.
+- **Real-Time Tracking** — Live interactive map powered by Leaflet showing detected cyclones with IMD classification (Depression → Super Cyclone), wind speed, pressure, position, and movement vectors.
+- **72-Hour AI Forecasts** — Deep learning model generates predicted storm paths with uncertainty cones, intensity progression charts, and rapid intensification alerts.
+- **Historical Replay Mode** — Select any past cyclone (Amphan, Fani, Biparjoy) and watch the AI's prediction vs. actual track side by side — the most convincing demo feature for validation.
+- **Operations Dashboard** — Dark-themed command center UI with bio-basin monitoring, storm search, confidence scoring, and multi-panel analytics.
+
+## Architecture
+
+| Component | Technology | Purpose |
+|:----------|:-----------|:--------|
+| Frontend | React + TypeScript + Leaflet + Recharts | Interactive dashboard and map visualization |
+| Backend | FastAPI + PostgreSQL | API server, data persistence, storm catalog |
+| ML Engine | PyTorch + xarray + NetCDF4 | Cyclone detection, classification, and path prediction |
+| Deployment | Docker + Render | Multi-service containerized deployment |

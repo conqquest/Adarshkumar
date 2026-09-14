@@ -1,14 +1,17 @@
 ---
-title: "Brains – MERN Stack CMS"
-description: "A Content Management System (CMS) enabling full CRUD operations, empowering over 200 users to securely create and organize digital knowledge bases."
-date: "12.2025"
-tech: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "TypeScript", "JWT"]
+title: "Brains – Highly Available AWS Web Architecture"
+description: "Production-style, highly available, scalable, secure, and automated AWS web architecture featuring multi-AZ EC2 Auto Scaling, Application Load Balancer, Dockerized microservices, Terraform IaC, and GitHub Actions CI/CD."
+date: "09.2026"
+tech: ["AWS", "Terraform", "Docker", "React", "Node.js", "TypeScript", "MongoDB", "GitHub Actions"]
 ---
 
-**Brains** is a modular Content Management System (CMS) built on the MERN stack.
+**Brains** is a production-grade, highly available web application architecture designed and deployed on AWS as a case study in cloud engineering and automated infrastructure.
 
-## Key Highlights
+## Architectural Highlights
 
-- **User Empowerment** — Enabled full CRUD operations for over 200 concurrent users to safely create, read, update, and organize personal and digital knowledge bases.
-- **Security** — Secured all server endpoints using JSON Web Token (JWT) authentication protocols.
-- **Code Quality** — Maintained a highly structured TypeScript codebase, reducing runtime errors by 25% and enhancing system maintenance.
+- **High Availability & Fault Tolerance** — Deployed across 2 Availability Zones (us-east-1a, us-east-1b) behind an AWS Application Load Balancer (ALB) with health checks (`/api/health`) and dynamic target groups.
+- **Auto-Scaling Group (ASG)** — Dynamic capacity scaling between 2 and 4 EC2 instances based on target CPU utilization tracking (50% target threshold).
+- **Infrastructure as Code (IaC)** — Fully automated Terraform module provisioning 20+ AWS resources including VPC, public/private subnets, Internet Gateway, NAT Gateway, Security Groups, ALB, ASG, and IAM roles.
+- **Containerized Microservices** — Docker multi-stage builds separating React/Vite frontend static delivery via Nginx and Node.js/TypeScript Express API server connected to MongoDB.
+- **CI/CD Pipeline** — GitHub Actions workflow executing automated linting, unit testing, Docker image building/tagging, EC2 image deployment, and zero-downtime rolling updates.
+- **Experimental Verification** — Validated under load tests, simulated single-instance failure (automatic ALB drain and ASG replacement), and automated deployment rollbacks.

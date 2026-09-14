@@ -21,7 +21,7 @@ export default function HomePage() {
       <TechStackSection />
       <ExperienceSection limit={3} showAllLink />
       {/* <AchievementsSection limit={3} showAllLink /> */}
-      <FeaturedProjects limit={2} />
+      <FeaturedProjects limit={4} />
       <GitHubContributions />
       <QuoteVisitorCard />
     </div>

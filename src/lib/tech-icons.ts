@@ -31,6 +31,8 @@ export const techIconMap: Record<string, string> = {
   Express: "express",
   "React.js": "react",
   Nginx: "nginx",
+  PyTorch: "pytorch",
+  Leaflet: "leaflet",
 };
 
 export function getTechIcon(tech: string) {
