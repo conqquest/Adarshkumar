@@ -25,6 +25,12 @@ export const techIconMap: Record<string, string> = {
   MobileNetV2: "tensorflow",
   "Google Generative AI": "google",
   "GitHub API": "github",
+  AWS: "amazonwebservices",
+  Terraform: "terraform",
+  "GitHub Actions": "githubactions",
+  Express: "express",
+  "React.js": "react",
+  Nginx: "nginx",
 };
 
 export function getTechIcon(tech: string) {

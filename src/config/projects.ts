@@ -38,14 +38,14 @@ export const projects: Project[] = [
   },
   {
     slug: "brains",
-    title: "Brains – MERN Stack CMS",
-    date: "12.2025",
+    title: "Brains – Highly Available Cloud Architecture",
+    date: "09.2026",
     description:
-      "Developed a Content Management System (CMS) enabling full CRUD operations, empowering over 200 users to securely create and organize digital knowledge bases.",
-    tech: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "TypeScript", "JWT"],
+      "Designed and deployed a production-grade, highly available web architecture on AWS with multi-AZ auto-scaling (2–4 EC2 instances), Application Load Balancer, Dockerized microservices, Terraform IaC (20+ resources), and CI/CD automation — built as a case study with experimental verification of failover, scaling, and rollback.",
+    tech: ["AWS", "Terraform", "Docker", "React", "Node.js", "TypeScript", "MongoDB", "GitHub Actions"],
     href: "https://github.com/conqquest/Brains-CMS",
     featured: true,
     cover: "/assets/projects/brains.png",
-    gradient: "from-violet-500/25 via-purple-500/15 to-fuchsia-500/25",
+    gradient: "from-amber-500/25 via-orange-500/15 to-red-500/25",
   },
 ];
