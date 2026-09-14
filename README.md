@@ -2,8 +2,6 @@
 
 Personal portfolio for a software developer and cloud engineer. Built with Next.js 15, TypeScript, Tailwind CSS v4, and MDX — clean layout, fast pages, and content you can edit without touching UI code.
 
-![Portfolio preview](./public/assets/readme-preview.png)
-
 **Live:** [adarshkumar007.vercel.app](https://adarshkumar007.vercel.app) · **GitHub:** [@conqquest](https://github.com/conqquest)
 
 ---
