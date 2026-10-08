@@ -3,6 +3,7 @@ import { TechStackSection } from "@/components/landing/tech-stack-section";
 import { ExperienceSection } from "@/components/landing/experience-section";
 // import { AchievementsSection } from "@/components/landing/achievements-section";
 import { FeaturedProjects } from "@/components/landing/featured-projects";
+import { ScheduleMeetingSection } from "@/components/landing/schedule-meeting";
 import { GitHubContributions } from "@/components/landing/github-contributions";
 import { QuoteVisitorCard } from "@/components/landing/quote-visitor-card";
 import { siteConfig } from "@/config/meta";
@@ -22,8 +23,10 @@ export default function HomePage() {
       <ExperienceSection limit={3} showAllLink />
       {/* <AchievementsSection limit={3} showAllLink /> */}
       <FeaturedProjects limit={4} />
+      <ScheduleMeetingSection />
       <GitHubContributions />
       <QuoteVisitorCard />
     </div>
   );
 }
+
