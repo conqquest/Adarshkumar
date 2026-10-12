@@ -1,0 +1,27 @@
+---
+title: "Loadbalancer for AWS – Multi-Tier Infrastructure"
+description: "A production-grade, highly available three-tier AWS infrastructure fully provisioned with Terraform. Features Web, App & Database tiers, Auto Scaling, Application Load Balancers, and Multi-AZ RDS out of the box."
+date: "10.2026"
+tech: ["AWS", "Terraform", "React", "TypeScript", "Vite", "Auto Scaling", "RDS", "Cloudflare Pages"]
+---
+
+**Loadbalancer for AWS** is a production-grade, highly available three-tier AWS cloud infrastructure architecture fully provisioned and managed with Terraform IaC, complemented by an interactive architecture explorer web application.
+
+- **Live Explorer**: [loadbalancer-a83.pages.dev](https://loadbalancer-a83.pages.dev/)
+- **GitHub Repository**: [conqquest/aws-production-multi-tier-terraform](https://github.com/conqquest/aws-production-multi-tier-terraform)
+
+## Architecture Overview
+
+The system implements AWS Well-Architected Framework best practices, isolating concerns across three dedicated network tiers in a custom VPC:
+
+1. **Web Tier (Presentation)** — Internet-facing Application Load Balancer (ALB) distributed across multiple Availability Zones, routing incoming HTTP/HTTPS traffic and terminating SSL/TLS.
+2. **Application Tier (Business Logic)** — Auto Scaling Group (ASG) of EC2 compute instances deployed strictly in private subnets, autoscaling based on real-time traffic and CPU metrics.
+3. **Database Tier (Persistence)** — Multi-AZ Amazon RDS instance provisioned in isolated subnets with no internet ingress, automated backups, and standby failover replicas.
+
+## Technical Highlights
+
+- **Infrastructure as Code (IaC)** — 100% codified using modular Terraform with parameterized inputs, remote S3 state storage, and DynamoDB state locking.
+- **High Availability & Fault Tolerance** — Zero single-point-of-failure design with multi-AZ redundancy for both compute and managed database storage.
+- **Defense in Depth Security** — Layered Security Groups restricting traffic between tiers (ALB → Web/App → DB only on required ports), private subnet isolation, and least-privilege IAM roles.
+- **Automated Scalability** — Target tracking scaling policies dynamically adjusting instance counts based on workload demand to optimize cost and performance.
+- **Interactive Web Companion** — Companion showcase portal built with React 19, TypeScript, and Vite, deployed on Cloudflare Pages for instant global edge delivery.

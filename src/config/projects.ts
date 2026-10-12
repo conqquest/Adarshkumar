@@ -14,6 +14,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "aws-multi-tier-loadbalancer",
+    title: "Loadbalancer for AWS – Multi-Tier Infrastructure",
+    date: "10.2026",
+    description:
+      "A production-grade, highly available three-tier AWS infrastructure fully provisioned with Terraform. Web, App & Database tiers, Auto Scaling, Application Load Balancers, and Multi-AZ RDS out of the box.",
+    tech: ["AWS", "Terraform", "React", "TypeScript", "Vite", "Auto Scaling", "RDS", "Cloudflare Pages"],
+    href: "https://github.com/conqquest/aws-production-multi-tier-terraform",
+    website: "https://loadbalancer-a83.pages.dev/",
+    featured: true,
+    cover: "/assets/projects/loadbalancer.png",
+    gradient: "from-blue-600/25 via-indigo-500/15 to-sky-500/25",
+  },
+  {
     slug: "cyclocast",
     title: "CycloCast – AI Cyclone Intelligence Platform",
     date: "09.2026",
