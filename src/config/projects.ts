@@ -14,6 +14,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "checkpoint-honest-product-intel",
+    title: "CheckPoint!! – Honest Product Intel",
+    date: "11.2026",
+    description:
+      "Product health intelligence platform & Android app built for HackCBS 9.0. Instantly scans Indian packaged foods and sanitary pads to uncover hidden palm oil, chemical preservatives, excessive free sugars, and bleached pad fibers using deterministic FSSAI/BIS scoring and Gemini Vision OCR.",
+    tech: ["Android", "Capacitor", "React", "TypeScript", "NestJS", "MongoDB", "Google Generative AI", "Tailwind CSS"],
+    href: "https://github.com/conqquest/checkpoint.hackcbs9.0",
+    website: "https://scanlabels.pages.dev/",
+    featured: true,
+    cover: "/assets/projects/checkpoint.png",
+    gradient: "from-lime-500/25 via-emerald-500/15 to-teal-500/25",
+  },
+  {
     slug: "aws-multi-tier-loadbalancer",
     title: "Loadbalancer for AWS – Multi-Tier Infrastructure",
     date: "10.2026",

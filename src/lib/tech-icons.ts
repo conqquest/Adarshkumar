@@ -35,6 +35,9 @@ export const techIconMap: Record<string, string> = {
   Leaflet: "leaflet",
   Vite: "vite",
   "Cloudflare Pages": "cloudflarepages",
+  NestJS: "nestjs",
+  Android: "android",
+  Capacitor: "capacitor",
 };
 
 export function getTechIcon(tech: string) {

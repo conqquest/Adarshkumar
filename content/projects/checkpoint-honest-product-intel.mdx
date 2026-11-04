@@ -1,0 +1,44 @@
+---
+title: "CheckPoint!! – Honest Product Intel"
+description: "Product health intelligence platform & Android app built for HackCBS 9.0. Instantly scans Indian packaged foods and sanitary pads to uncover hidden palm oil, chemical preservatives, excessive free sugars, and bleached pad fibers using deterministic FSSAI/BIS scoring and Gemini Vision OCR."
+date: "11.2026"
+tech: ["Android", "Capacitor", "React", "TypeScript", "NestJS", "MongoDB", "Google Generative AI", "Tailwind CSS"]
+---
+
+**CheckPoint!!** is an independent product health intelligence platform and ultra-lightweight Android application built for **HackCBS 9.0**. It empowers Indian shoppers to scan packaged supermarket foods and feminine sanitary care products, decode back-of-pack ingredients, and receive an instant, fully explainable **A–E health and safety grade**.
+
+- **Live Web Portal & APK Distribution**: [scanlabels.pages.dev](https://scanlabels.pages.dev/)
+- **GitHub Repository**: [conqquest/checkpoint.hackcbs9.0](https://github.com/conqquest/checkpoint.hackcbs9.0)
+
+![CheckPoint!! Honest Product Intel](/assets/projects/checkpoint.png)
+
+## The Problem
+
+Packaged foods and feminine hygiene products are staple supermarket purchases across India, yet back-of-pack labels obscure critical health risks:
+
+- **Hidden Palm Oil** — Refined palm oil (containing ~45% saturated palmitic acid) is routinely disguised under vague terms like *"edible vegetable oil"*.
+- **Cryptic Additive Codes** — Harmful chemical preservatives and emulsifiers appear as obscure INS/E-numbers (e.g., INS 503(ii), INS 500(ii)) that consumers cannot decode on the go.
+- **Sanitary Pad Opaque Compositions** — Period products rarely disclose chlorine bleaching, toxic dioxin residues, synthetic fragrance compounds, or high plastic percentages.
+- **Flawed AI Rating Apps** — Many modern barcode apps rely entirely on hallucinated LLM scores that produce inconsistent grades from scan to scan, lacking adherence to Indian FSSAI or BIS benchmarks.
+
+## Core Features & Engineering Highlights
+
+- **Deterministic FSSAI & BIS Rating Engine** — Health and safety grades are computed strictly by deterministic TypeScript algorithms, never by hallucinated LLMs. Every single point reduction is tied directly to verified nutritional benchmarks and official regulations.
+- **Automated Palm Oil Penalty Engine** — Automatically detects palm olein derivatives and enforces an unavoidable 1-grade downgrade on products relying on cheap saturated palm fats.
+- **Sanitary Pad Safety Lab (BIS IS:5405)** — A dedicated evaluation module auditing sanitary pads against official Indian standards, detecting chlorine-bleached wood pulp, dioxin risks, synthetic perfumes, and plastic film layers.
+- **Sub-10ms Barcode Engine** — Over 880+ high-velocity Indian supermarket FMCG products pre-indexed in MongoDB Atlas for instant zero-latency scanning in grocery store aisles.
+- **Gemini Vision Label OCR** — For unlisted artisanal snacks or bakery goods without registered barcodes, users can photograph the ingredient label; Google Gemini multimodal extraction parses the ingredients table into structured data before piping it into the deterministic rating engine.
+- **Pregnancy & Allergen Safety Filters** — Flags pregnancy-sensitive ingredients (high-dose retinol, alcohol, unpasteurized elements, herbal stimulants) and customizable consumer allergens.
+- **100% Bilingual (English & हिन्दी)** — Full native Hindi localization toggled in one tap, translating nutrition explanations, rating justifications, and warnings.
+- **Ultra-Lightweight Android APK** — Built with React, Vite, and Capacitor into a high-performance Android APK (~5.7 MB) with zero ads, backed by a Neo-brutalist Cloudflare Pages promotional portal.
+
+## Technical Architecture
+
+| Layer | Technologies | Purpose |
+|:------|:-------------|:--------|
+| **Mobile App** | Capacitor 8, Android SDK | Native camera barcode scanning, flashlight control, offline scan cache |
+| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS 4, Zustand | Mobile-first UI, Neo-Kinetic design system, state management |
+| **Backend API** | NestJS 11, TypeScript, Express | High-throughput REST API with caching, validation pipes, and rate limiting |
+| **Database** | MongoDB Atlas, Mongoose | Curated Indian FMCG product catalog and scan cache |
+| **Label OCR** | Google Generative AI (Gemini Flash) | Structured multimodal extraction from back-label photographs |
+| **Deployment** | Cloudflare Pages & Render | Global edge web distribution and containerized cloud API hosting |
