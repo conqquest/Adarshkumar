@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" shape-rendering="geometricPrecision">
+  <defs>
+    <filter id="pawShadow" x="-25%" y="-25%" width="160%" height="160%">
+      <feDropShadow dx="0.6" dy="1.2" stdDeviation="0.7" flood-color="#000000" flood-opacity="0.38" />
+    </filter>
+    <linearGradient id="fur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="65%" stop-color="#FFF8F4" />
+      <stop offset="100%" stop-color="#FDEEE6" />
+    </linearGradient>
+    <linearGradient id="beanPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8BC" />
+      <stop offset="100%" stop-color="#FF6B92" />
+    </linearGradient>
+    <linearGradient id="beanShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#pawShadow)">
+    <!-- White outer rim for maximum contrast on dark mode -->
+    <path d="
+      M 4.5,7.2
+      C 2.8,4.5 4,1.8 6.8,1.8
+      C 9,1.8 10.2,3.5 11,5.2
+      C 11.6,2.8 13.2,1 15.6,1
+      C 18,1 19.2,2.8 19.8,5.2
+      C 20.8,3.5 22.8,2.6 25,3.4
+      C 27.2,4.2 28,6.8 26.8,9.6
+      C 28.2,9 30.2,10.2 30.5,12.6
+      C 30.9,15.6 29.2,18.2 27.2,20.2
+      C 27,22.4 26,26.4 23.6,28.8
+      C 21.2,31 17.2,30.8 14.6,29.2
+      C 12.5,27.5 11,24 10,21.8
+      C 8,21.2 5.5,19 4.2,16
+      C 3.2,13.4 3.4,10.5 4.5,7.2
+      Z
+    " fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round" />
+
+    <!-- Main Fur Body with Dark Outline -->
+    <path d="
+      M 4.5,7.2
+      C 2.8,4.5 4,1.8 6.8,1.8
+      C 9,1.8 10.2,3.5 11,5.2
+      C 11.6,2.8 13.2,1 15.6,1
+      C 18,1 19.2,2.8 19.8,5.2
+      C 20.8,3.5 22.8,2.6 25,3.4
+      C 27.2,4.2 28,6.8 26.8,9.6
+      C 28.2,9 30.2,10.2 30.5,12.6
+      C 30.9,15.6 29.2,18.2 27.2,20.2
+      C 27,22.4 26,26.4 23.6,28.8
+      C 21.2,31 17.2,30.8 14.6,29.2
+      C 12.5,27.5 11,24 10,21.8
+      C 8,21.2 5.5,19 4.2,16
+      C 3.2,13.4 3.4,10.5 4.5,7.2
+      Z
+    " fill="url(#fur)" stroke="#261A16" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+
+    
+    <path d="
+      M 16,15.2
+      C 18.2,14.4 21,15.2 21.6,17.4
+      C 22.2,19.6 22,21.6 20.8,23.2
+      C 19.6,24.4 17.8,24.2 16.6,23.2
+      C 16.3,23 15.7,23 15.4,23.2
+      C 14.2,24.2 12.4,24.4 11.2,23.2
+      C 10,21.6 9.8,19.6 10.4,17.4
+      C 11,15.2 13.8,14.4 16,15.2
+      Z
+    " fill="url(#beanPink)" stroke="#D84870" stroke-width="0.75" stroke-linejoin="round" />
+    <ellipse cx="16" cy="17.2" rx="3.8" ry="2.2" fill="url(#beanShine)" />
+
+
+    <!-- 4 Cute Pink Toe Beans -->
+    <!-- Toe 1 (Hotspot toe at 4.5, 3.5) -->
+    <ellipse cx="7" cy="5.8" rx="2.2" ry="3" transform="rotate(-30 7 5.8)" fill="url(#beanPink)" stroke="#D84870" stroke-width="0.65" />
+    <ellipse cx="6.5" cy="5" rx="1.2" ry="1.6" transform="rotate(-30 6.5 5)" fill="url(#beanShine)" />
+
+    <!-- Toe 2 (Top middle toe) -->
+    <ellipse cx="15.2" cy="4.2" rx="2.3" ry="3.1" transform="rotate(-5 15.2 4.2)" fill="url(#beanPink)" stroke="#D84870" stroke-width="0.65" />
+    <ellipse cx="14.8" cy="3.5" rx="1.3" ry="1.7" transform="rotate(-5 14.8 3.5)" fill="url(#beanShine)" />
+
+    <!-- Toe 3 (Upper right toe) -->
+    <ellipse cx="22.5" cy="6.6" rx="2.2" ry="3" transform="rotate(25 22.5 6.6)" fill="url(#beanPink)" stroke="#D84870" stroke-width="0.65" />
+    <ellipse cx="22" cy="5.8" rx="1.2" ry="1.6" transform="rotate(25 22 5.8)" fill="url(#beanShine)" />
+
+    <!-- Toe 4 (Outer toe) -->
+    <ellipse cx="27" cy="13.2" rx="2" ry="2.7" transform="rotate(50 27 13.2)" fill="url(#beanPink)" stroke="#D84870" stroke-width="0.65" />
+    <ellipse cx="26.4" cy="12.5" rx="1.1" ry="1.4" transform="rotate(50 26.4 12.5)" fill="url(#beanShine)" />
+  </g>
+</svg>
