@@ -81,12 +81,48 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url('/assets/cursors/kitten-paw.png') 5 3, url('/assets/cursors/kitten-paw.svg') 5 3, auto;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: url('/assets/cursors/kitten-paw.png') 5 3, url('/assets/cursors/kitten-paw.svg') 5 3, auto;
+}
+
+/* Custom Kitten Paw interactive pointer */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+select,
+summary,
+.cursor-pointer,
+#mowgli.is-asleep {
+  cursor: url('/assets/cursors/kitten-paw-pointer.png') 4 2, url('/assets/cursors/kitten-paw-pointer.svg') 4 2, pointer;
+}
+
+/* Preserve I-beam cursor for typing in text inputs */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+textarea,
+[contenteditable="true"] {
+  cursor: text;
+}
+
+/* Disabled controls */
+button:disabled,
+input:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
 }
 
 .bg-green-grid {
